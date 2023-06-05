@@ -15,7 +15,7 @@ model Todo {
   title     String
   content   String
   priority  Priority
-  complete  Boolean
+  complete  Boolean  @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

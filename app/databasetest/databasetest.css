@@ -28,3 +28,8 @@
 .todo-list-item-key {
   color: hsl(0, 0%, 70%);
 }
+
+.todo-list-item-id {
+  font-size: 0.7rem;
+  color: hsl(200, 50%, 80%);
+}

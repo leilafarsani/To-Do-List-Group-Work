@@ -1,0 +1,30 @@
+.databasetest-page {
+  display: grid;
+  justify-content: center;
+}
+
+.databasetest-title {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.todo-list {
+  display: grid;
+  gap: 10px;
+  /* remove default ul padding left */
+  padding-left: 0;
+  font-size: 0.8rem;
+}
+
+.todo-list-item {
+  display: grid;
+  grid-template-columns: 0.25fr 0.75fr;
+  padding: 10px;
+  border: 1px solid grey;
+  background: hsl(0, 0%, 15%);
+  color: hsl(0, 0%, 85%);
+}
+
+.todo-list-item-key {
+  color: hsl(0, 0%, 70%);
+}

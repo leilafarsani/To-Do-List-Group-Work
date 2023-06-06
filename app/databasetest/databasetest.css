@@ -11,7 +11,6 @@
   grid-template-columns: repeat(auto-fit, 350px);
   justify-content: center;
   gap: 15px;
-  /* remove default ul padding left */
+  /* remove the default ul padding left */
   padding-left: 0;
-  font-size: 0.8rem;
 }

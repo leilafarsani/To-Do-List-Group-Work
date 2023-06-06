@@ -7,6 +7,7 @@
   border-radius: 5px;
   background: hsl(0, 0%, 15%);
   color: hsl(0, 0%, 85%);
+  font-size: 0.8rem;
 }
 
 .todo-card-key {
@@ -23,6 +24,7 @@
   font-size: 1.1rem;
   font-weight: 600;
 }
+
 .todo-card-content {
   font-size: 1rem;
 }

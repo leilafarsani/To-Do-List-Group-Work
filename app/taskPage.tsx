@@ -1,14 +1,14 @@
 "use client"
 import React, { useState } from "react";
 import Layout from "./layout";
-import styles from "./page.module.css"
+import styles from "./taskPage.module.css";
 
 interface Task {
   title: string;
   description: string;
 }
 
-const Page: React.FC = () => {
+const TaskPage: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -57,4 +57,5 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
+export default TaskPage;
+

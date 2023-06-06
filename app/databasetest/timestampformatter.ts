@@ -1,4 +1,4 @@
-export default function timestampFormatter(date: Date) {
+export default function timestampFormatter(date) {
   const options = {
     hour: "numeric",
     minute: "numeric",

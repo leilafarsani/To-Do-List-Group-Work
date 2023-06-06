@@ -1,6 +1,4 @@
 .databasetest-page {
-  display: grid;
-  justify-content: center;
 }
 
 .databasetest-title {
@@ -10,26 +8,10 @@
 
 .todo-list {
   display: grid;
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, 350px);
+  justify-content: center;
+  gap: 15px;
   /* remove default ul padding left */
   padding-left: 0;
   font-size: 0.8rem;
-}
-
-.todo-list-item {
-  display: grid;
-  grid-template-columns: 0.25fr 0.75fr;
-  padding: 10px;
-  border: 1px solid grey;
-  background: hsl(0, 0%, 15%);
-  color: hsl(0, 0%, 85%);
-}
-
-.todo-list-item-key {
-  color: hsl(0, 0%, 70%);
-}
-
-.todo-list-item-id {
-  font-size: 0.7rem;
-  color: hsl(200, 50%, 80%);
 }

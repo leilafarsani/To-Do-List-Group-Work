@@ -1,9 +1,9 @@
 import timestampFormatter from "./timestampformatter";
 import "./ToDoCard.css";
 
-export default function ToDoCard({ key, todo }) {
+export default function ToDoCard({ todo }) {
   return (
-    <li key={key} className="todo-card">
+    <li className="todo-card">
       <span className="todo-card-key">id:</span>
       <span className="todo-card-id">{todo.id}</span>
       <span className="todo-card-key">title:</span>

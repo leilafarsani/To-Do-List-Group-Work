@@ -29,7 +29,7 @@ export default function ToDoCard({ key, todo }) {
       </span>
       <span className="todo-card-key">updatedAt:</span>
       <span className="todo-card-updated-at">
-        {timestampFormatter(todo.createdAt)}
+        {timestampFormatter(todo.updatedAt)}
       </span>
     </li>
   );

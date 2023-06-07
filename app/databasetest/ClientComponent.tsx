@@ -42,7 +42,6 @@ export default function ClientComponent() {
       <ul className={styles.toDoList}>
         {allTodos &&
           allTodos.map((todo) => <ToDoCard key={todo.id} todo={todo} />)}
-        ))}
       </ul>
     </>
   );

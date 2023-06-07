@@ -12,6 +12,7 @@ export default function ClientComponent() {
   useEffect(() => {
     async function getAllTodos() {
       setIsLoading(true);
+      setIsError(false);
       try {
         const response = await fetch("/api/todos");
         const data = await response.json();
@@ -20,7 +21,8 @@ export default function ClientComponent() {
         setTodos(data);
       } catch (error) {
         // console.error(error);
-        setIsError(error.toString());
+        // setIsError(error.toString());
+        setIsError(true);
       } finally {
         setIsLoading(false);
       }
@@ -33,7 +35,7 @@ export default function ClientComponent() {
     return <div className={styles.loading}>Loading...</div>;
   }
   if (isError) {
-    return <div className={styles.error}>Error : {isError}</div>;
+    return <div className={styles.error}>Error!</div>;
   }
   return (
     <>

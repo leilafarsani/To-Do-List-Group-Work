@@ -7,7 +7,7 @@ import styles from "./ToDoList.module.css";
 export default function ClientComponent() {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-  const [allTodos, setTodos] = useState(null);
+  const [allTodos, setTodos] = useState<Array<any> | null>(null);
 
   useEffect(() => {
     async function getAllTodos() {
@@ -40,8 +40,8 @@ export default function ClientComponent() {
   return (
     <>
       <ul className={styles.toDoList}>
-        {allTodos.map((todo) => (
-          <ToDoCard key={todo.id} todo={todo} />
+        {allTodos &&
+          allTodos.map((todo) => <ToDoCard key={todo.id} todo={todo} />)}
         ))}
       </ul>
     </>

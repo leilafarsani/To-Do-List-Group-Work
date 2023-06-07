@@ -1,4 +1,4 @@
-import { prisma } from "../libs/prismadb";
+import { prisma } from "../libs/prisma";
 import ToDoCard from "./ToDoCard";
 import styles from "./ToDoList.module.css";
 

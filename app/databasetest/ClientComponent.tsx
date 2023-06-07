@@ -30,10 +30,10 @@ export default function ClientComponent() {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className={styles.loading}>Loading...</div>;
   }
   if (isError) {
-    return <div>Error : {isError}</div>;
+    return <div className={styles.error}>Error : {isError}</div>;
   }
   return (
     <>

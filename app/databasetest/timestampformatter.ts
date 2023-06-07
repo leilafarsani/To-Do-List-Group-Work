@@ -1,4 +1,5 @@
-export default function timestampFormatter(date: Date) {
+export default function timestampFormatter(prismaDateTime) {
+  const date = new Date(prismaDateTime);
   const formatter = new Intl.DateTimeFormat("en-GB", {
     hour: "numeric",
     minute: "numeric",

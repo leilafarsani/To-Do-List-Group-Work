@@ -1,5 +1,5 @@
-export default function timestampFormatter(date) {
-  const options = {
+export default function timestampFormatter(date: Date) {
+  const formatter = new Intl.DateTimeFormat("en-GB", {
     hour: "numeric",
     minute: "numeric",
     second: "numeric",
@@ -8,7 +8,6 @@ export default function timestampFormatter(date) {
     year: "numeric",
     hour12: false,
     timeZone: "GMT",
-  };
-  const formatter = new Intl.DateTimeFormat("en-GB", options);
+  });
   return formatter.format(date);
 }

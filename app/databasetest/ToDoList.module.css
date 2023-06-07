@@ -1,12 +1,4 @@
-.databasetest-page {
-}
-
-.databasetest-title {
-  margin: 15px 0;
-  text-align: center;
-}
-
-.todo-list {
+.toDoList {
   display: grid;
   grid-template-columns: repeat(auto-fit, 350px);
   justify-content: center;

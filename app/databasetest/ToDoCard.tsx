@@ -1,16 +1,34 @@
 import timestampFormatter from "./timestampformatter";
-import "./ToDoCard.css";
+import styles from "./ToDoCard.module.css";
 
-export default function ToDoCard({ todo }) {
+// the ToDo type alias defines the structure of a single todo item
+type ToDo = {
+  id: string;
+  title: string;
+  content: string;
+  priority: "low" | "medium" | "high";
+  complete: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+// the ToDoCardProps type alias specifies the props expected by the ToDoCard component
+type ToDoCardProps = {
+  todo: ToDo;
+};
+
+// ToDoCardProps is the type annotation that specifies the expected type of the props object.
+// It ensures that the props object passed to the ToDoCard component adheres to the structure defined by the ToDoCardProps type alias.
+export default function ToDoCard({ todo }: ToDoCardProps) {
   return (
-    <li className="todo-card">
-      <span className="todo-card-key">id:</span>
-      <span className="todo-card-id">{todo.id}</span>
-      <span className="todo-card-key">title:</span>
-      <span className="todo-card-title">{todo.title}</span>
-      <span className="todo-card-key">content:</span>
-      <span className="todo-card-content">{todo.content}</span>
-      <span className="todo-card-key">priority:</span>
+    <li className={styles.toDoCard}>
+      <span className={styles.key}>id:</span>
+      <span className={styles.id}>{todo.id}</span>
+      <span className={styles.key}>title:</span>
+      <span className={styles.title}>{todo.title}</span>
+      <span className={styles.key}>content:</span>
+      <span className={styles.content}>{todo.content}</span>
+      <span className={styles.key}>priority:</span>
       <span>
         {todo.priority}{" "}
         {todo.priority === "low"
@@ -19,16 +37,16 @@ export default function ToDoCard({ todo }) {
           ? "🟠"
           : "🔴"}
       </span>
-      <span className="todo-card-key">complete:</span>
+      <span className={styles.key}>complete:</span>
       <span>
         {todo.complete.toString()} {todo.complete ? "✅" : "❌"}
       </span>
-      <span className="todo-card-key">createdAt:</span>
-      <span className="todo-card-created-at">
+      <span className={styles.key}>createdAt:</span>
+      <span className={styles.createdAt}>
         {timestampFormatter(todo.createdAt)}
       </span>
-      <span className="todo-card-key">updatedAt:</span>
-      <span className="todo-card-updated-at">
+      <span className={styles.key}>updatedAt:</span>
+      <span className={styles.updatedAt}>
         {timestampFormatter(todo.updatedAt)}
       </span>
     </li>

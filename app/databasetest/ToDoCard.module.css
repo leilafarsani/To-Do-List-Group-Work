@@ -1,4 +1,4 @@
-.todo-card {
+.toDoCard {
   display: grid;
   grid-template-columns: 0.25fr 0.75fr;
   row-gap: 5px;
@@ -10,27 +10,27 @@
   font-size: 0.8rem;
 }
 
-.todo-card-key {
+.key {
   color: hsl(0, 0%, 50%);
 }
 
-.todo-card-id {
+.id {
   font-size: 0.7rem;
   font-style: italic;
   font-weight: 200;
 }
 
-.todo-card-title {
+.title {
   font-size: 1.1rem;
   font-weight: 600;
 }
 
-.todo-card-content {
+.content {
   font-size: 1rem;
 }
 
-.todo-card-created-at,
-.todo-card-updated-at {
+.createdAt,
+.updatedAt {
   font-size: 0.7rem;
   font-weight: 300;
 }

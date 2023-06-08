@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from "react";
-import Layout from "./layout";
 import styles from "./taskPage.module.css";
 
 interface Task {
@@ -23,7 +22,7 @@ const TaskPage: React.FC = () => {
   };
 
   return (
-    <Layout>
+    <>
       <h1 className={styles.title}>To-do List</h1>
       <div className={styles.container}>
         <div className={styles.inputContainer}>
@@ -53,7 +52,7 @@ const TaskPage: React.FC = () => {
           </li>
         ))}
       </ul>
-    </Layout>
+    </>
   );
 };
 

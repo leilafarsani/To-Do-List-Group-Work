@@ -7,18 +7,27 @@ interface Task {
   description: string;
 }
 
-const TaskPage: React.FC = () => {
+const TaskPage = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [taskData, setTaskData] = useState<Task>({
+    title: "",
+    description: "",
+  });
+  const [error, setError] = useState("");
 
   const handleAddTask = () => {
-    if (title.trim() !== "") {
-      const newTask: Task = { title, description };
-      setTasks((prevTasks) => [...prevTasks, newTask]);
-      setTitle("");
-      setDescription("");
+    if (taskData.title.trim() === "") {
+      setError("Please enter a task title");
+      return;
     }
+
+    const newTask: Task = {
+      title: taskData.title,
+      description: taskData.description,
+    };
+    setTasks((prevTasks) => [...prevTasks, newTask]);
+    setTaskData({ title: "", description: "" });
+    setError("");
   };
 
   return (
@@ -30,15 +39,20 @@ const TaskPage: React.FC = () => {
             className={styles.input}
             type="text"
             placeholder="Task Title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            value={taskData.title}
+            onChange={(e) =>
+              setTaskData({ ...taskData, title: e.target.value })
+            }
           />
           <textarea
             className={styles.input}
             placeholder="Task Description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            value={taskData.description}
+            onChange={(e) =>
+              setTaskData({ ...taskData, description: e.target.value })
+            }
           ></textarea>
+          {error && <p className={styles.error}>{error}</p>}
         </div>
         <button className={styles.button} onClick={handleAddTask}>
           Add Task
@@ -57,4 +71,3 @@ const TaskPage: React.FC = () => {
 };
 
 export default TaskPage;
-

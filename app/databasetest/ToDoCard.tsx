@@ -3,7 +3,7 @@ import styles from "./ToDoCard.module.css";
 
 // the ToDoCardProps type alias specifies the props expected by the ToDoCard component
 type ToDoCardProps = {
-  todo: ToDo;
+  todo: Todo;
 };
 
 // ToDoCardProps is the type annotation that specifies the expected type of the props object.

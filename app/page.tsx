@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import TaskPage from "../app/taskPage";
+import TaskPage from "./taskPage";
 
 const HomePage: NextPage = () => {
   return <TaskPage />;

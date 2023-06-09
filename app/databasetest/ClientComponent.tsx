@@ -7,7 +7,7 @@ import styles from "./ToDoList.module.css";
 export default function ClientComponent() {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-  const [allTodos, setTodos] = useState<ToDo[] | null>(null);
+  const [allTodos, setTodos] = useState<Todo[] | null>(null);
 
   useEffect(() => {
     async function getAllTodos() {

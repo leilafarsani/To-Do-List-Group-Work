@@ -7,7 +7,7 @@ export default async function ServerComponent() {
   // an async Server Action to get all of the Todos from the database
   async function getAllTodos() {
     "use server";
-    const allTodos: ToDo[] = await prisma.todo.findMany();
+    const allTodos: Todo[] = await prisma.todo.findMany();
     // note: this console.log shows in the server console (not the client console)
     console.log("getAllTodos allTodos:", allTodos);
     return allTodos;

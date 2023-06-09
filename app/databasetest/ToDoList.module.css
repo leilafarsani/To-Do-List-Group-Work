@@ -1,0 +1,18 @@
+.toDoList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  justify-content: center;
+  gap: 15px;
+  /* remove the default ul padding left */
+  padding-left: 0;
+}
+
+.loading {
+  text-align: center;
+  color: greenyellow;
+}
+
+.error {
+  text-align: center;
+  color: red;
+}

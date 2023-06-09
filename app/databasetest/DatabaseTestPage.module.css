@@ -1,0 +1,16 @@
+.databaseTestPage {
+}
+
+.title,
+.subtitle {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+}

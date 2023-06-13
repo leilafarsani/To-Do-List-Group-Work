@@ -1,20 +1,9 @@
 import timestampFormatter from "./timestampformatter";
 import styles from "./ToDoCard.module.css";
 
-// the ToDo type alias defines the structure of a single todo item
-type ToDo = {
-  id: string;
-  title: string;
-  content: string;
-  priority: "low" | "medium" | "high";
-  complete: boolean;
-  createdAt: Date;
-  updatedAt: Date;
-};
-
 // the ToDoCardProps type alias specifies the props expected by the ToDoCard component
 type ToDoCardProps = {
-  todo: ToDo;
+  todo: Todo;
 };
 
 // ToDoCardProps is the type annotation that specifies the expected type of the props object.
